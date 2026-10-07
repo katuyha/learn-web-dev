@@ -7,20 +7,193 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!--
-      ЗАДАНИЕ
-      ========
-      Сверстать страницу выбора даты и времени по своему макету.
 
-      Пока это только вёрстка. Никакого JavaScript — ни кликов,
-      ни переходов, ни выбора дня. Всё статично.
+  <div class="page">
 
-      Стили пишите в styles.css. Разметку — здесь.
-    -->
+  <header class="header">
+    <div class="header__inner">
+        <a class="logo" href="#">
+            <span class="logo__mark">л</span>
+            <span class="logo__text">
+                <span class="logo__name">лепесток</span>
+                <span class="logo__subtitle">СТУДИЯ ВОЛОС И КРАСОТЫ</span>
+            </span>
+        </a>
 
-    <div class="page">
-      <!-- Начните отсюда. Разметьте шапку, основную область
-           с календарём и слотами, подвал. -->
+        <nav class="navigation">
+            <a class="navigation__link" href="#">Услуги</a>
+            <a class="navigation__link" href="#">Мастера</a>
+            <a class="navigation__link" href="#">Отзывы</a>
+            <a class="navigation__link" href="#">Контакты</a>
+            <a class="navigation__button" href="#">Записаться</a>
+        </nav>
     </div>
+  </header>
+
+  <main class="main">
+
+      <section class="steps">
+          <div class="steps__inner">
+              <div class="steps__title">
+                  <span class="steps__caption">ВАША ЗАПИСЬ</span>
+                  <strong class="steps__counter">Шаг 3 / 5</strong>
+              </div>
+
+              <div class="steps__list">
+                  <div class="step step--done">
+                      <span class="step__circle">✓</span>
+                      <span class="step__text">Мастер</span>
+                  </div>
+                  <div class="step step--done">
+                      <span class="step__circle">✓</span>
+                      <span class="step__text">Услуга</span>
+                  </div>
+                  <div class="step step--active">
+                      <span class="step__circle">3</span>
+                      <span class="step__text">Дата и время</span>
+                  </div>
+                  <div class="step">
+                      <span class="step__circle">4</span>
+                      <span class="step__text">Контакты</span>
+                  </div>
+                  <div class="step">
+                      <span class="step__circle">5</span>
+                      <span class="step__text">Проверка</span>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="booking">
+          <div class="booking__inner">
+              <div class="booking__heading">
+                  <span class="booking__eyebrow">03 / ДАТА И ВРЕМЯ</span>
+                  <h1 class="booking__title">Найдём ваше окошко</h1>
+                  <p class="booking__description">Октябрь 2026 · Алина · «Стрижка и уход» (90 минут).</p>
+              </div>
+
+              <div class="booking__content">
+
+                  <section class="calendar">
+                      <div class="calendar__header">
+                          <h2 class="calendar__month">ОКТЯБРЬ 2026</h2>
+                          <div class="calendar__arrows">
+                              <button class="calendar__arrow" type="button">‹</button>
+                              <button class="calendar__arrow" type="button">›</button>
+                          </div>
+                      </div>
+
+                      <div class="calendar__week">
+                          <span class="calendar__weekday">Пн</span>
+                          <span class="calendar__weekday">Вт</span>
+                          <span class="calendar__weekday">Ср</span>
+                          <span class="calendar__weekday">Чт</span>
+                          <span class="calendar__weekday">Пт</span>
+                          <span class="calendar__weekday">Сб</span>
+                          <span class="calendar__weekday">Вс</span>
+                      </div>
+
+                      <div class="calendar__days">
+                          <span class="calendar__empty"></span>
+                          <span class="calendar__empty"></span>
+                          <span class="calendar__empty"></span>
+
+                          <button class="day" type="button">1</button>
+                          <button class="day" type="button">2</button>
+                          <button class="day" type="button">3</button>
+                          <button class="day" type="button">4</button>
+
+                          <button class="day" type="button">5</button>
+                          <button class="day" type="button">6</button>
+                          <button class="day" type="button">7</button>
+                          <button class="day" type="button">8</button>
+                          <button class="day day--selected" type="button">9</button>
+                          <button class="day day--weekend" type="button">10</button>
+                          <button class="day" type="button">11</button>
+
+                          <button class="day" type="button">12</button>
+                          <button class="day" type="button">13</button>
+                          <button class="day" type="button">14</button>
+                          <button class="day" type="button">15</button>
+                          <button class="day" type="button">16</button>
+                          <button class="day" type="button">17</button>
+                          <button class="day" type="button">18</button>
+
+                          <button class="day" type="button">19</button>
+                          <button class="day" type="button">20</button>
+                          <button class="day" type="button">21</button>
+                          <button class="day" type="button">22</button>
+                          <button class="day" type="button">23</button>
+                          <button class="day" type="button">24</button>
+                          <button class="day" type="button">25</button>
+
+                          <button class="day" type="button">26</button>
+                          <button class="day" type="button">27</button>
+                          <button class="day" type="button">28</button>
+                          <button class="day" type="button">29</button>
+                          <button class="day" type="button">30</button>
+                          <button class="day" type="button">31</button>
+                      </div>
+
+                      <button class="calendar__refresh" type="button">↻ Обновить расписание</button>
+                  </section>
+
+                  <section class="time">
+                      <h2 class="time__title">Пятница, 9 октября</h2>
+                      <p class="time__hint">Выберите удобный интервал</p>
+
+                      <div class="time__slots">
+                          <button class="slot" type="button">10:00</button>
+                          <button class="slot" type="button">11:30</button>
+                          <button class="slot slot--busy" type="button">
+                              <span>12:00</span>
+                              <small>ЗАНЯТО</small>
+                          </button>
+                          <button class="slot slot--selected" type="button">13:00</button>
+                          <button class="slot" type="button">14:30</button>
+                          <button class="slot slot--busy" type="button">
+                              <span>16:00</span>
+                              <small>ЗАНЯТО</small>
+                          </button>
+                          <button class="slot" type="button">17:30</button>
+                          <button class="slot" type="button">19:00</button>
+                      </div>
+                  </section>
+
+              </div>
+
+              <div class="booking__summary">
+                  Выбрано: 9 октября · 13:00 · Алина · 90 минут
+              </div>
+
+              <div class="booking__actions">
+                  <button class="back-button" type="button">← Назад</button>
+                  <button class="next-button" type="button">Это время →</button>
+              </div>
+          </div>
+      </section>
+
+  </main>
+
+  <footer class="footer">
+      <div class="footer__inner">
+          <div class="footer__brand">
+              <strong class="footer__logo">лепесток</strong>
+              <span class="footer__tagline">Место, где забота становится стилем.</span>
+          </div>
+
+          <div class="footer__block">
+              <span class="footer__label">АДРЕС</span>
+              <span class="footer__value">Ярославль, Звёздная, 34</span>
+              <span class="footer__value">Ежедневно 10:00–21:00</span>
+          </div>
+
+          <div class="footer__block footer__block--contact">
+              <span class="footer__label">СВЯЗАТЬСЯ</span>
+              <span class="footer__value">+7 (495) 234–11–77</span>
+          </div>
+      </div>
+  </footer>
+  </div>
   </body>
 </html>
