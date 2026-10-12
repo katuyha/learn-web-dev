@@ -12,7 +12,7 @@ body {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Manrope", Arial, sans-serif;
     color: #493444;
     background: #fff8fb;
 }
@@ -81,7 +81,7 @@ a {
 }
 
 .logo__name {
-    font-family: Georgia, "Lora", serif;
+    font-family: "Lora", Georgia, serif;
     font-size: 22px;
     line-height: 19px;
     font-weight: 700;
@@ -324,13 +324,15 @@ a {
 }
 
 .calendar__days {
-    grid-auto-rows: 35px;
+    grid-auto-rows: 1fr;
+    gap: 15px;
 }
 
 .day,
 .calendar__empty {
     width: 100%;
     min-width: 0;
+    aspect-ratio: 1 / 1;
     border-radius: 6px;
 }
 
@@ -338,7 +340,8 @@ a {
     background: #fff8fb;
     color: #493444;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .day:hover {
@@ -378,7 +381,11 @@ a {
 
 .time {
     flex: 1;
-    padding: 17px 13px 14px;
+    min-width: 0;
+    min-height: 0;
+    padding: 17px 33px 34px;
+    display: flex;
+    flex-direction: column;
 }
 
 .time__title {
@@ -389,26 +396,32 @@ a {
 }
 
 .time__hint {
-    margin: 7px 0 20px;
+    margin: 15px 0 20px;
     color: #a9969f;
     font-size: 13px;
 }
 
 .time__slots {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 9px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    gap: 20px 20px;
+    width: 100%;
+    flex: 1;
+    min-height: 0;
 }
 
 .slot {
-    width: calc(50% - 5px);
-    height: 44px;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    box-sizing: border-box;
     border: 1px solid #edd8e1;
-    border-radius: 6px;
+    border-radius: 10px;
     background: #fff8fb;
     color: #493444;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -436,11 +449,11 @@ a {
     flex-direction: column;
     justify-content: center;
     gap: 6px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .slot--busy small {
-    font-size: 8px;
+    font-size: 10px;
     color: #b8aeb3;
 }
 
