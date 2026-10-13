@@ -1,14 +1,147 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Выбор даты и времени</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page">
-      <!-- Перенесите вашу верстку. Удалите статичные данные. Подключите скрипт -->
-    </div>
-  </body>
+</head>
+<body>
+
+<div class="page">
+
+    <header class="header">
+        <div class="header__inner">
+            <a class="logo" href="#">
+                <span class="logo__mark">л</span>
+                <span class="logo__text">
+                    <span class="logo__name">лепесток</span>
+                    <span class="logo__subtitle">СТУДИЯ ВОЛОС И КРАСОТЫ</span>
+                </span>
+            </a>
+
+            <nav class="navigation">
+                <a class="navigation__link" href="#">Услуги</a>
+                <a class="navigation__link" href="#">Мастера</a>
+                <a class="navigation__link" href="#">Отзывы</a>
+                <a class="navigation__link" href="#">Контакты</a>
+                <a class="navigation__button" href="#">Записаться</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="steps">
+            <div class="steps__inner">
+                <div class="steps__title">
+                    <span class="steps__caption">ВАША ЗАПИСЬ</span>
+                    <strong class="steps__counter">Шаг 3 / 5</strong>
+                </div>
+
+                <div class="steps__list">
+                    <div class="step step--done">
+                        <span class="step__circle">✓</span>
+                        <span class="step__text">Мастер</span>
+                    </div>
+                    <div class="step step--done">
+                        <span class="step__circle">✓</span>
+                        <span class="step__text">Услуга</span>
+                    </div>
+                    <div class="step step--active">
+                        <span class="step__circle">3</span>
+                        <span class="step__text">Дата и время</span>
+                    </div>
+                    <div class="step">
+                        <span class="step__circle">4</span>
+                        <span class="step__text">Контакты</span>
+                    </div>
+                    <div class="step">
+                        <span class="step__circle">5</span>
+                        <span class="step__text">Проверка</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking">
+            <div class="booking__inner">
+                <div class="booking__heading">
+                    <span class="booking__eyebrow">03 / ДАТА И ВРЕМЯ</span>
+                    <h1 class="booking__title">Найдём ваше окошко</h1>
+                    <p class="booking__description">Алина · «Стрижка и уход» (90 минут).</p>
+                </div>
+
+                <div class="booking__content">
+
+                    <section class="calendar">
+                        <div class="calendar__header">
+                            <h2 class="calendar__month"></h2>
+                            <div class="calendar__arrows">
+                                <button class="calendar__arrow" type="button" aria-label="Предыдущий месяц">‹</button>
+                                <button class="calendar__arrow" type="button" aria-label="Следующий месяц">›</button>
+                            </div>
+                        </div>
+
+                        <div class="calendar__week">
+                            <span class="calendar__weekday">Пн</span>
+                            <span class="calendar__weekday">Вт</span>
+                            <span class="calendar__weekday">Ср</span>
+                            <span class="calendar__weekday">Чт</span>
+                            <span class="calendar__weekday">Пт</span>
+                            <span class="calendar__weekday">Сб</span>
+                            <span class="calendar__weekday">Вс</span>
+                        </div>
+
+                        <div class="calendar__days"></div>
+
+                        <button class="calendar__refresh" type="button">↻ Обновить расписание</button>
+                    </section>
+
+                    <section class="time">
+                        <h2 class="time__title"></h2>
+                        <p class="time__hint">Выберите удобный интервал</p>
+                        <div class="time__slots"></div>
+                    </section>
+
+                </div>
+
+                <div class="booking__summary"></div>
+
+                <div class="booking__actions">
+                    <button class="back-button" type="button">← Назад</button>
+                    <button class="next-button" type="button">Это время →</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <strong class="footer__logo">лепесток</strong>
+                <span class="footer__tagline">Место, где забота становится стилем.</span>
+            </div>
+
+            <div class="footer__block">
+                <span class="footer__label">АДРЕС</span>
+                <span class="footer__value">Ярославль, Звёздная, 34</span>
+                <span class="footer__value">Ежедневно 10:00–21:00</span>
+            </div>
+
+            <div class="footer__block footer__block--contact">
+                <span class="footer__label">СВЯЗАТЬСЯ</span>
+                <span class="footer__value">+7 (495) 234–11–77</span>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
